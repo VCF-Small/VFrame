@@ -7007,6 +7007,34 @@ label.panel-block:hover {
   width: 100%;
 }
 
+.navbar-big {
+  min-height: 5rem;
+}
+
+.navbar-big-1 {
+  min-height: 4.25rem;
+}
+
+.navbar-big-2 {
+  min-height: 4.5rem;
+}
+
+.navbar-big-3 {
+  min-height: 4.75rem;
+}
+
+.navbar-big-4 {
+  min-height: 5rem;
+}
+
+.navbar-big-5 {
+  min-height: 5.25rem;
+}
+
+.navbar-big-6 {
+  min-height: 5.5rem;
+}
+
 /* Bulma Grid */
 .column {
   display: block;
