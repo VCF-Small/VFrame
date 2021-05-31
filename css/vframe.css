@@ -7005,6 +7005,8 @@ label.panel-block:hover {
   position: fixed;
   top: 0;
   width: 100%;
+  opacity: 0.9;
+  filter: blur(0.4);
 }
 
 .navbar-big {

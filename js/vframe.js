@@ -61,81 +61,19 @@ for (let i = 0; i < btn.length; i++) {
 
 
 
+/* -------------------------------------------------------------------------- */
+/*                            Sticky Navbar Control                           */
+/* -------------------------------------------------------------------------- */
 
-/**-----------------------------------------------------------------------------------------*
- *                                Bulma Tabs Js Control                                     *
- * ---------------------------------------------------------------------------------------**/
+window.onscroll = function () { addSticky() };
 
-
-//select all the tab-button
-var tabButtons = document.getElementsByClassName('tab-button');
-
-// Select all the tab content
-var tabContent = document.getElementsByClassName('tab-content');
-
-// Select the active tab content which is the tab- 1 by default
-var targetedTabContent = document.querySelector(tabButtons[0].dataset.target);
-
-// initially set the display to 'none' for all the tabContent except the first tabContent
-for (var j = 1; j < tabContent.length; j++) {
-    tabContent[j].style.display = 'none';
-}
-
-for (let i = 0; i < tabButtons.length; i++) {
-
-    try {
-        tabButtons[i].addEventListener('click', (e) => {
-
-            targetedTabContent = document.querySelector(tabButtons[i].dataset.target);
-
-            // Set all the tabContent display to none
-            for (var j = 0; j < tabContent.length; j++) {
-                tabContent[j].style.display = 'none';
-            }
-
-            // Set the targetedTabContent display to block
-            targetedTabContent.style.display = 'block';
-
-
-            // Remove the is-active class from the previously active tab button
-            for(let j=0; j<tabButtons.length; j++)
-            {
-                if(tabButtons[j].classList.contains('is-active'))
-                {
-                    tabButtons[j].classList.remove('is-active');
-                }
-            }
-
-            // Set the tab button to active
-            if(!(tabButtons[i].classList.contains('is-active')))
-            {
-                tabButtons[i].classList.add('is-active');
-            }
-        });
-    }
-    catch (err) {
-        console.log(err);
-    }
-}
-
-
-
-
-/**-----------------------------------------------------------------------------------------*
- *                                Bulma Message Js Control                                  *
- * ---------------------------------------------------------------------------------------**/
-
-// Select all the messages
-var messages = document.getElementsByClassName('message');
-
-for(let i = 0; i < messages.length; i++){
-    try {
-
-        // It just accepts the first delete button in the message
-        messages[i].getElementsByClassName('delete')[0].addEventListener('click', (e)=>{
-            messages[i].style.display = 'none';
-        })
-    } catch (err) {
-        console.log(err);
+var navbarm = document.getElementsByClassName("navbar")[0];
+var sticky = navbarm.offsetTop;
+console.log(navbar)
+function addSticky() {
+    if (window.pageYOffset > sticky) {
+        navbarm.classList.add("navbar-sticky")
+    } else {
+        navbarm.classList.remove("navbar-sticky");
     }
 }
