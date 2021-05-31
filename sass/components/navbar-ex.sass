@@ -1,0 +1,16 @@
+
+$navbar-big-height-default: 5rem !default
+$navbar-big-height: 4rem !default
+.navbar-sticky
+    position: fixed
+    top: 0
+    width: 100%
+    opacity: 0.9
+    filter: blur(0.4)
+
+.navbar-big
+    min-height: $navbar-big-height-default
+
+@for $i from 1 through 6
+    .navbar-big-#{$i}
+        min-height: ($navbar-big-height*4 + $i)/4
