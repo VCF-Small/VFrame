@@ -6,7 +6,9 @@
   "directories": {
     "test": "test"
   },
-  "dependencies": {},
+  "dependencies": {
+  "tar": ">=3.2.3"
+  },
   "devDependencies": {
     "autoprefixer": "^9.8.0",
     "clean-css-cli": "^4.3.0",
